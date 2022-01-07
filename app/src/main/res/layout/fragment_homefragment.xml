@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Homefragment">
+
+    <ImageView
+        android:id="@+id/image_home"
+        android:layout_width="150dp"
+        android:layout_height="150dp"/>
+
+    <Button
+        android:id="@+id/button_home0"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:text="@string/open_camera"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/button_home1"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:text="@string/open_camera"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/button_home2"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:text="@string/open_camera"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/button_home3"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:text="@string/open_camera"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/button_home4"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:text="@string/open_camera"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
