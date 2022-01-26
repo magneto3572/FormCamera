@@ -66,8 +66,10 @@ class cameraXFragmnets : DialogFragment() {
     private var cameraProvider: ProcessCameraProvider? = null
     private var cameraselectorfront: Int = 0
     private var cameraSelector : CameraSelector? = null
+    private var quality : Int? = null
 
     private var IMAGE_REQ_CODE: Int = 0
+    private var imagename: String? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -75,7 +77,9 @@ class cameraXFragmnets : DialogFragment() {
 
         IMAGE_REQ_CODE = arguments?.getInt("IMAGE_REQ_CODE") ?: 0
         address = arguments?.getString("address")
+        imagename = arguments?.getString("imagename")
         cameraselectorfront = arguments?.getInt("cameraselector")?:0
+        quality = arguments?.getInt("quality")?:0
     }
 
     override fun onStart() {
@@ -337,6 +341,9 @@ class cameraXFragmnets : DialogFragment() {
                         else if(cameraselectorfront == 2){
                             matrix.postRotate(-90f)
                             matrix.preScale(1.0f, -1.0f)
+                        }else if(cameraselectorfront ==3){
+                            matrix.postRotate(-90f)
+                            matrix.preScale(1.0f, -1.0f)
                         }
                     }
 
@@ -366,6 +373,8 @@ class cameraXFragmnets : DialogFragment() {
                         }
                     }
                     bundle.putInt("IMAGE_REQ_CODE", IMAGE_REQ_CODE)
+                    bundle.putString("imagetext", imagename)
+                    bundle.putInt("imgquality", quality!!)
 
                     activity?.runOnUiThread {
                         binding?.cameraCaptureButton?.isEnabled = true
